@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOTO CENTER — Scooters 125 cm³ à Asnières</title>
+<meta name="description" content="Essayez un scooter 125 cm³ chez MOTO CENTER à Asnières-sur-Seine. Essai gratuit, acompte de 100 € remboursable.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--onyx:#0e0e10;--anth:#16161a;--red:#e50914;--red-d:#c10811;--white:#fff;--grey:#8c8c9a;--soft:#f4f3f1;--line:#e6e4df;--ink:#1a1a1f}
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;padding-bottom:72px}
+  h1,h2,h3{font-family:Montserrat,Inter,sans-serif;line-height:1.15}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .mock{background:#fff7d6;color:#6b5a00;text-align:center;font-size:12.5px;padding:7px 12px}
+  header{position:absolute;top:30px;left:0;right:0;z-index:5}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;color:#fff}
+  .logo{font-family:Montserrat;font-weight:800;letter-spacing:.05em}
+  .logo span{color:var(--red)}
+  .nav a{color:#fff;font-weight:600;text-decoration:none;font-size:14px;border:1px solid rgba(255,255,255,.4);padding:8px 14px;border-radius:8px}
+  /* hero */
+  .hero{position:relative;color:#fff;min-height:640px;display:flex;align-items:center;
+    background:linear-gradient(90deg,rgba(14,14,16,.92) 0%,rgba(14,14,16,.7) 55%,rgba(14,14,16,.35) 100%),url("images/boutique.jpg") center/cover no-repeat}
+  .hero .wrap{padding-top:110px;padding-bottom:70px}
+  .badge{display:inline-block;background:rgba(229,9,20,.2);border:1px solid rgba(229,9,20,.5);color:#ffb3b6;padding:6px 14px;border-radius:99px;font-size:13px;margin-bottom:18px}
+  h1{font-size:clamp(34px,5.4vw,58px);font-weight:800;max-width:720px;margin-bottom:16px}
+  h1 em{font-style:normal;color:var(--red)}
+  .lead{font-size:clamp(16px,2vw,20px);color:#d7d8de;max-width:600px;margin-bottom:28px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:15px 24px;border-radius:8px;font-family:Montserrat;font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;border:2px solid var(--red);background:var(--red);color:#fff;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--red-d);box-shadow:0 6px 22px rgba(229,9,20,.35)}
+  .btn.ghost{background:transparent;border-color:rgba(255,255,255,.55)}
+  .btn.ghost:hover{background:rgba(255,255,255,.1);box-shadow:none}
+  .chips{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;color:#c9cad2;font-size:14px}
+  .chips span::before{content:"✓ ";color:var(--red);font-weight:700}
+  /* sections */
+  section{padding:72px 0}
+  section.dark{background:var(--onyx);color:#fff}
+  section.soft{background:var(--soft)}
+  h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;margin-bottom:10px}
+  .sub{color:#5f6270;max-width:640px;margin-bottom:34px}
+  .dark .sub{color:#b9bac4}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+  .dark .card{background:var(--anth);border-color:#2a2a31}
+  .ico{width:44px;height:44px;border-radius:10px;background:rgba(229,9,20,.1);color:var(--red);display:grid;place-items:center;font-size:21px;margin-bottom:12px;font-weight:700}
+  .card h3{font-size:17px;margin-bottom:6px}
+  .card p{color:#5f6270;font-size:14.5px}
+  .dark .card p{color:#b9bac4}
+  /* reassurance bar */
+  .bar{background:var(--anth);color:#fff;padding:26px 0}
+  .bar .items{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .bar b{display:block;font-family:Montserrat;font-size:15px}
+  .bar span{font-size:13.5px;color:#b9bac4}
+  /* models */
+  .model img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;margin-bottom:14px;display:block}
+  .price{font-family:Montserrat;font-size:24px;font-weight:800;margin:6px 0 4px}
+  .price small{font:500 13px Inter;color:#777}
+  .who{font-size:13px;color:var(--red);font-weight:600;margin-bottom:10px}
+  .model ul{padding-left:18px;color:#5f6270;font-size:14.5px;margin-bottom:16px}
+  .model .btn{width:100%;text-align:center;padding:13px 10px}
+  .model .btn.ghost{border-color:#cfcdc7;color:var(--ink)}
+  .model .btn.ghost:hover{background:#f0efec}
+  .note{font-size:13px;color:#777;margin-top:14px}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+  .step{position:relative;padding-top:52px}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font:800 16px Montserrat;display:grid;place-items:center}
+  .step h3{font-size:18px;margin-bottom:4px}
+  .step p{color:#b9bac4;font-size:14.5px}
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:16px 0}
+  summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::after{content:"+";color:var(--red);font-weight:800}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:8px;color:#5f6270}
+  /* form */
+  .formbox{display:grid;grid-template-columns:1fr 1fr;gap:36px;background:var(--onyx);color:#fff;border-radius:16px;padding:38px}
+  .formbox p{color:#c9cad2}
+  form{display:grid;gap:12px}
+  label{font-size:13px;color:#c9cad2}
+  input,select{width:100%;padding:13px;border-radius:8px;border:1px solid #3a3a42;background:var(--anth);color:#fff;font:inherit}
+  .choice{display:grid;gap:8px}
+  .choice label{display:flex;gap:10px;align-items:flex-start;background:var(--anth);border:1px solid #3a3a42;border-radius:10px;padding:12px;color:#fff;font-size:14px;cursor:pointer}
+  .choice input{width:auto;margin-top:3px}
+  .consent{font-size:12px;color:#8c8c9a}
+  footer{padding:30px 0;color:#777;font-size:13px;border-top:1px solid var(--line)}
+  /* sticky bar */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(14,14,16,.96);padding:10px 14px;display:flex;gap:10px;justify-content:center}
+  .sticky .btn{padding:12px 16px;font-size:12.5px;flex:1;max-width:260px;text-align:center}
+  /* cookies */
+  #cookies{position:fixed;left:16px;bottom:84px;max-width:420px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 34px rgba(0,0,0,.25);padding:18px;z-index:30;display:none}
+  #cookies p{font-size:13.5px;color:#5f6270;margin:6px 0 12px}
+  #cookies .row{display:flex;gap:8px}
+  #cookies .btn{padding:10px 16px}
+  #cookies .btn.ghost{color:var(--ink);border-color:#cfcdc7}
+  @media(max-width:860px){
+    .grid4,.bar .items{grid-template-columns:1fr 1fr}
+    .grid3,.steps,.formbox{grid-template-columns:1fr}
+    .hero{min-height:560px}
+    .hero{background:linear-gradient(180deg,rgba(14,14,16,.7),rgba(14,14,16,.92)),url("images/boutique.jpg") 30% center/cover no-repeat}
+    section{padding:52px 0}
+    .formbox{padding:24px}
+    #cookies{left:10px;right:10px;max-width:none}
+  }
+  @media(max-width:520px){.grid4,.bar .items{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="mock">Maquette pédagogique (cas fictif MOTO CENTER) : cette page sert de MVP pour l'exercice. Aucune donnée n'est envoyée.</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">MOTO <span>CENTER</span></div>
+    <a href="#essai" data-cta="nav">Réserver un essai</a>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<div class="hero">
+  <div class="wrap">
+    <span class="badge">Asnières · Clichy · Levallois · La Défense</span>
+    <h1 id="titre">Arrivez à l'heure, <em>chaque jour.</em></h1>
+    <p class="lead" id="sous-titre">Un scooter 125 cm³ avec votre permis B : des trajets plus rapides, plus simples et plus économiques, du matin au soir.</p>
+    <div class="btns">
+      <a class="btn" href="#essai" data-cta="essai-hero">Réserver un essai gratuit</a>
+      <a class="btn ghost" href="#modeles">Voir les scooters</a>
+    </div>
+    <div class="chips">
+      <span>Permis B + formation de 7 h</span>
+      <span>Essai gratuit à Asnières</span>
+      <span>Atelier sur place</span>
+    </div>
+  </div>
+</div>
+
+<!-- 2. RÉASSURANCE -->
+<div class="bar">
+  <div class="wrap items">
+    <div><b>Stationnement</b><span>Nous vous aidons à trouver une solution.</span></div>
+    <div><b>Budget clair</b><span>Prix annoncés, à comparer avec vos trajets.</span></div>
+    <div><b>Antivol et assurance</b><span>Conseils pendant l'essai.</span></div>
+    <div><b>Concession locale</b><span>À Asnières-sur-Seine depuis 15 ans.</span></div>
+  </div>
+</div>
+
+<!-- 3. POUR QUI -->
+<section>
+  <div class="wrap">
+    <h2>Un scooter, pour quels trajets ?</h2>
+    <p class="sub">Chacun a ses raisons de quitter les transports pleins ou la voiture. Voici les plus courantes.</p>
+    <div class="grid4">
+      <div class="card"><div class="ico">⏱</div><h3>Actifs</h3><p>Paris ou La Défense chaque jour : évitez les retards et les heures de pointe.</p></div>
+      <div class="card"><div class="ico">🎓</div><h3>Étudiants et alternants</h3><p>Cours, entreprise, jobs : un budget maîtrisé et des horaires libres.</p></div>
+      <div class="card"><div class="ico">👨‍👩‍👧</div><h3>Parents</h3><p>École, travail, courses : gagnez du temps sur tous les trajets du quotidien.</p></div>
+      <div class="card"><div class="ico">🌙</div><h3>Horaires décalés</h3><p>Tôt le matin ou tard le soir, quand les transports ne suivent plus.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. MODÈLES -->
+<section class="soft" id="modeles">
+  <div class="wrap">
+    <h2>Trois scooters 125 cm³ à essayer</h2>
+    <p class="sub">Choisissez le modèle qui vous correspond. Réservez un essai gratuit, ou votre scooter avec 100 € d'acompte remboursable.</p>
+    <div class="grid3">
+      <div class="card model">
+        <img src="images/scooter_urbain.jpg" alt="Scooter Urbain noir mat sur une rue pavée de Paris" loading="lazy">
+        <h3>Urbain</h3><div class="price">dès 3 000 € <small>TTC</small></div>
+        <div class="who">Étudiants, alternants, petits trajets</div>
+        <ul><li>Léger et facile à garer</li><li>Idéal en ville</li><li>Consommation réduite</li></ul>
+        <a class="btn ghost" href="#essai" data-cta="essai-urbain" data-modele="Urbain">Essayer ce modèle</a>
+      </div>
+      <div class="card model">
+        <img src="images/scooter_confort.jpg" alt="Scooter Confort rouge avec pare-brise et top case près d'un pont à Levallois" loading="lazy">
+        <h3>Confort</h3><div class="price">environ 4 000 € <small>TTC</small></div>
+        <div class="who">Trajets quotidiens, parents, actifs</div>
+        <ul><li>Pare-brise et top case</li><li>Plus de place et de confort</li><li>Pour rouler tous les jours</li></ul>
+        <a class="btn ghost" href="#essai" data-cta="essai-confort" data-modele="Confort">Essayer ce modèle</a>
+      </div>
+      <div class="card model">
+        <img src="images/scooter_premium.jpg" alt="Scooter Premium gris anthracite devant la Grande Arche de La Défense" loading="lazy">
+        <h3>Premium</h3><div class="price">jusqu'à 5 000 € <small>TTC</small></div>
+        <div class="who">Longs trajets, La Défense, Levallois</div>
+        <ul><li>Équipement complet</li><li>Confort et finitions</li><li>Pour les plus longs trajets</li></ul>
+        <a class="btn ghost" href="#essai" data-cta="essai-premium" data-modele="Premium">Essayer ce modèle</a>
+      </div>
+    </div>
+    <p class="note">Prix indicatifs pour l'exercice. Les scooters sont commandés seulement après une précommande.</p>
+  </div>
+</section>
+
+<!-- 5. COMMENT ÇA MARCHE -->
+<section class="dark">
+  <div class="wrap">
+    <h2>Comment ça marche ?</h2>
+    <p class="sub">Trois étapes, sans engagement au départ.</p>
+    <div class="steps">
+      <div class="step"><h3>Réservez un essai</h3><p>Choisissez un modèle et un créneau. L'essai est gratuit.</p></div>
+      <div class="step"><h3>Essayez en vrai</h3><p>Un conseiller vous accompagne et répond à vos questions : assurance, stationnement, vol.</p></div>
+      <div class="step"><h3>Réservez votre scooter</h3><p>Versez un acompte de 100 €, remboursable. Votre scooter est ensuite commandé pour vous.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FAQ -->
+<section>
+  <div class="wrap">
+    <h2>Encore un doute ? On répond.</h2>
+    <p class="sub">Les questions qui reviennent le plus souvent.</p>
+    <details><summary>J'ai seulement le permis B, est-ce suffisant ?</summary><p>Avec le permis B depuis au moins 2 ans, une formation de 7 heures permet de conduire un 125 cm³. Nous vous donnons les informations pour la suivre.</p></details>
+    <details><summary>Où garer mon scooter ?</summary><p>Nous vous conseillons sur les solutions autour de chez vous et de votre lieu de travail ou d'études (places deux-roues, box, parkings).</p></details>
+    <details><summary>Comment fonctionne l'assurance ?</summary><p>Un conseiller vous explique les options pendant l'essai, pour que vous compariez les prix avant de décider.</p></details>
+    <details><summary>Et si on me vole mon scooter ?</summary><p>Nous vous présentons les antivols adaptés et les garanties à vérifier avec votre assureur.</p></details>
+    <details><summary>L'acompte est-il remboursable ?</summary><p>Oui. L'acompte de 100 € est remboursable si vous changez d'avis avant la commande.</p></details>
+  </div>
+</section>
+
+<!-- 7. FORMULAIRE -->
+<section class="soft" id="essai">
+  <div class="wrap">
+    <div class="formbox">
+      <div>
+        <h2 style="color:#fff">Réservez votre essai</h2>
+        <p>Dites-nous ce qui vous convient. Nous vous répondons rapidement pour fixer un créneau en magasin.</p>
+      </div>
+      <form id="form">
+        <input type="hidden" id="variante" value="A">
+        <input type="hidden" id="source" value="direct">
+        <div><label for="prenom">Prénom</label><input id="prenom" autocomplete="given-name" placeholder="Votre prénom"></div>
+        <div><label for="contact">Téléphone ou e-mail</label><input id="contact" autocomplete="email" placeholder="06 00 00 00 00"></div>
+        <div><label for="profil">Vous êtes</label>
+          <select id="profil"><option>Actif</option><option>Étudiant ou alternant</option><option>Parent</option><option>En horaires décalés</option><option>Autre</option></select></div>
+        <div><label for="modele">Modèle à essayer</label>
+          <select id="modele"><option>Urbain</option><option>Confort</option><option>Premium</option></select></div>
+        <div class="choice">
+          <label><input type="radio" name="action" value="essai" checked> Je veux seulement un essai gratuit</label>
+          <label><input type="radio" name="action" value="acompte"> Je réserve mon scooter avec un acompte de 100 € remboursable</label>
+        </div>
+        <button class="btn" type="submit">Envoyer ma demande</button>
+        <div class="consent">Vos données servent uniquement à vous contacter pour cet essai.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">MOTO CENTER · Asnières-sur-Seine · Motos, scooters, accessoires et atelier. · Maquette pédagogique (cas fictif).</div>
+</footer>
+
+<div class="sticky">
+  <a class="btn ghost" href="#essai" data-cta="sticky-essai">Essai gratuit</a>
+  <a class="btn" href="#essai" data-cta="sticky-acompte" data-action="acompte">Réserver 100 €</a>
+</div>
+
+<div id="cookies" role="dialog" aria-label="Cookies">
+  <b>Cookies et mesure d'audience</b>
+  <p>Nous utilisons des cookies pour savoir d'où vous venez (annonce A ou B) et sur quels boutons vous cliquez. Cela nous aide à améliorer la page. Vous pouvez refuser.</p>
+  <div class="row">
+    <button class="btn" onclick="cookieChoice('accepte')">Accepter</button>
+    <button class="btn ghost" onclick="cookieChoice('refuse')">Refuser</button>
+  </div>
+</div>
+
+<script>
+  // Test A/B : l'annonce envoie ?utm_content=a ou ?utm_content=b
+  var p = new URLSearchParams(location.search);
+  var v = (p.get('utm_content') || 'a').toLowerCase() === 'b' ? 'B' : 'A';
+  document.getElementById('variante').value = v;
+  document.getElementById('source').value = p.get('utm_source') || 'direct';
+  if (v === 'B') {
+    document.getElementById('titre').innerHTML = 'Remplacez votre abonnement de transport, <em>roulez malin.</em>';
+    document.getElementById('sous-titre').textContent = 'Comparez le coût de vos trajets : avec un scooter 125 cm³, vous gagnez du temps et vous maîtrisez votre budget.';
+  }
+
+  // Cookies : on note les clics seulement si la personne a accepté.
+  var consent = null;
+  try { consent = localStorage.getItem('cookies'); } catch(e) {}
+  if (!consent) document.getElementById('cookies').style.display = 'block';
+  function cookieChoice(x){
+    try { localStorage.setItem('cookies', x); } catch(e) {}
+    consent = x;
+    document.getElementById('cookies').style.display = 'none';
+  }
+  window.clicks = [];
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a,button,summary,label');
+    if (!el) return;
+    // Pré-remplit le formulaire selon le bouton cliqué
+    if (el.dataset.modele) document.getElementById('modele').value = el.dataset.modele;
+    if (el.dataset.action === 'acompte') document.querySelector('input[value="acompte"]').checked = true;
+    if (consent !== 'accepte') return;
+    window.clicks.push({
+      element: el.dataset.cta || (el.textContent || '').trim().slice(0,40),
+      variante: v, heure: new Date().toISOString()
+    });
+  });
+  document.getElementById('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Maquette : aucune donnée envoyée. Merci pour votre intérêt !');
+  });
+</script>
+</body>
+</html>
